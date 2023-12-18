@@ -18,12 +18,11 @@ public class Runner {
         Runner.convertObjectToJson(teacher3);
 
 
-
     }
 
     public static <T> void convertObjectToJson(T object) throws OperationNotPossible {
         try {
-            if(!object.getClass().equals(Teacher.class)){
+            if (!object.getClass().equals(Teacher.class)) {
                 throw new OperationNotPossible("Wrong person for save!");
             }
 
@@ -37,7 +36,6 @@ public class Runner {
             throw new RuntimeException(e);
         }
     }
-
 
 
 }
