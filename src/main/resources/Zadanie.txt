@@ -1,0 +1,6 @@
+Napisz sobie metodę generyczną która będzie zapisywać obiekt do jsona.
+Użyj object mappera.
+Jedyny obiekt jaki można zapisać do jsona to będzie teacher.
+Zrób klasę student i klasę principal.
+Jeśli użytkownik poda w metodzie inną klasę niż teacher to rzuć wyjątkiem który sam zrobisz.
+Przykładowo OperationNotPossible i w wyjątku zwróć message typu, wrong person for save
