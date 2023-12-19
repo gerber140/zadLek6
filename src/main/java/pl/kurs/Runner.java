@@ -13,29 +13,17 @@ public class Runner {
         Student student = new Student("Student");
         Principal principal = new Principal("Principal");
 
-        Runner.convertObjectToJson(teacher);
-        Runner.convertObjectToJson(teacher2);
-        Runner.convertObjectToJson(teacher3);
-
-
-    }
-
-    public static <T> void convertObjectToJson(T object) throws OperationNotPossible {
         try {
-            if (!object.getClass().equals(Teacher.class)) {
-                throw new OperationNotPossible("Wrong person for save!");
-            }
-
-            ObjectMapper mapper = new ObjectMapper();
-            File jsonFile = new File("src/main/resources/teachers.json");
-
-            mapper.writeValue(jsonFile, object);
-
-            System.out.println("Obiekt został zapisany!");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            ConvertToJsonService.convertObjectToJson(student);
+        } catch (OperationNotPossible e) {
+            System.out.println(e.getMessage());
         }
+
+
+
     }
+
+
 
 
 }
