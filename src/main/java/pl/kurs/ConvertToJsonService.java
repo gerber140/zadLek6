@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class ConvertToJsonService {
     public static <T> void convertObjectToJson(T object) throws OperationNotPossible {
-        if(object instanceof Teacher){
+        if (object instanceof Teacher) {
             try {
                 ObjectMapper mapper = new ObjectMapper();
                 File jsonFile = new File("src/main/resources/teachers.json");
